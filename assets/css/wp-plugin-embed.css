@@ -1,0 +1,283 @@
+.wp-plugin-embed {
+	margin: 15px auto;
+}
+
+.wp-plugin-embed:not(.empty) > .loader {
+	display: none !important;
+}
+
+.wp-plugin-embed.empty {
+	height: 100px;
+	background: #f0f0f0;
+	border-radius: 3px;
+}
+
+.wp-plugin-embed.empty >.wp-plugin-embed-inner {
+	display: none;
+}
+
+/**
+ * Embed styles
+ */
+
+.plugin-info {
+	position: relative;
+	top: auto;
+	right: auto;
+	padding-top: 1.25em;
+}
+
+.plugin-info p {
+	clear:both;
+}
+
+.plugin-icon {
+	display: inline-block;
+}
+
+.plugin-details {
+	float: none;
+	max-width: none;
+	margin-bottom: 1.5em;
+}
+
+.plugin-details p {
+	text-align: left;
+	margin-bottom: .5em;
+}
+
+.plugin-details p span {
+	display: inline-block;
+}
+
+.plugin-description {
+	float: none;
+	width: auto;
+}
+
+/****************************/
+
+.wp-plugin-embed-inner {
+	border-radius: 3px;
+	overflow: hidden;
+	border: thin solid #e0e0e0;
+}
+
+.plugin-header-image img {
+	display: block;
+}
+
+.plugin-icon {
+	width: 22%;
+	margin-right: .5rem;
+	float: left;
+}
+
+.plugin-name {
+	width: 74%;
+	float: left;
+}
+
+.plugin-name p {
+	margin-bottom: 0
+}
+
+.plugin-icon img {
+	border-radius: 2px;
+}
+
+.plugin-info-main h3 {
+	padding-top: 0;
+	font-weight: 500;
+	margin-bottom: 0;
+}
+
+p.plugin-by {
+	font-size: .7rem;
+	font-style: italic;
+}
+
+.plugin-info-main {
+	position: relative;
+	padding-top: .5em;
+	padding-left: .5em;
+	padding-right: .5em;
+}
+
+.plugin-info-main:not(.panel-closed) {
+	box-shadow: 0px 1px 6px rgba(0,0,0,.25);
+}
+
+.plugin-info p {
+	margin-bottom: .25rem;
+	font-size: .8rem;
+	font-weight: 600;
+	clear: both;
+}
+
+p.rating {
+	color: #FFC733;
+}
+
+.plugin-info p.expand-more-info {
+	cursor: pointer;
+	margin-top: .9em;
+	font-size: .7rem;
+}
+
+.plugin-info-extra {
+	clear: both;
+	display: none;
+	padding: .75em.5em;
+	background: #f8f8f8;
+}
+
+.plugin-info-extra p:last-child {
+	margin-bottom: 0;
+}
+
+.plugin-info-extra * {
+	font-size: .75rem;
+}
+
+.platform-icons a {
+	margin: 0 0 0 .5em;
+}
+
+.platform-icons a, .platform-icons a:hover, .platform-icons a:focus {
+	box-shadow: none;
+}
+
+.plugin-details {
+	padding-left: .75em;
+	box-sizing: border-box;
+	border-left: 3px solid;
+}
+
+.plugin-details p {
+	font-weight: 600;
+}
+
+.plugin-details p span {
+	font-weight: normal;
+}
+
+/****/
+
+
+/**
+ * Media Queries
+ */
+
+@media screen and ( min-width: 550px ) {
+	
+	.plugin-icon, .plugin-name, .plugin-info {
+		vertical-align: top;
+		display: inline-block;
+		float: none;
+	}
+	
+	.plugin-icon {
+		width: 15%;
+		max-width: none;
+		margin-right: 0;
+	}
+	
+	.plugin-name {
+		width: 53%;
+		padding: 0 2%;
+		box-sizing: border-box;
+	}
+	
+	.plugin-info {
+		width: 30%;
+		padding-top: 0;
+	}
+	
+	p.plugin-by {
+		font-size: .8rem;
+	}
+	
+	.plugin-info p {
+		text-align: right;
+		clear: none;
+	}
+	
+	.plugin-description {
+		float: left;
+		width: 73%;
+		margin-right: 2%;
+	}
+	
+	.plugin-details {
+		float: right;
+		max-width: 25%;
+	}
+	
+	.plugin-details p {
+		text-align: right;
+	}
+	
+	.plugin-details p span {
+		display: block;
+	}
+}
+
+/** Loader animation **/
+.wp-plugin-embed.empty > .loader,
+.wp-plugin-embed.empty > .loader:before,
+.wp-plugin-embed.empty > .loader:after {
+	border-radius: 50%;
+	width: 1em;
+	height: 1em;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation: load7 1.8s infinite ease-in-out;
+	animation: load7 1.8s infinite ease-in-out;
+}
+.wp-plugin-embed.empty > .loader {
+	color: #bdbdbd;
+	margin: 0 auto;
+	font-size: 10px;
+	position: relative;
+	top: 35%;
+	-webkit-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+.wp-plugin-embed.empty > .loader:before,
+.wp-plugin-embed.empty > .loader:after {
+	content: '';
+	position: absolute;
+	top: 0;
+}
+.wp-plugin-embed.empty > .loader:before {
+	left: -1.5em;
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+.wp-plugin-embed.empty > .loader:after {
+	left: 1.5em;
+}
+@-webkit-keyframes load7 {
+	0%,
+	80%,
+	100% {
+		box-shadow: 0 1.1em 0 -1.3em;
+	}
+	40% {
+		box-shadow: 0 1.1em 0 0;
+	}
+}
+@keyframes load7 {
+	0%,
+	80%,
+	100% {
+		box-shadow: 0 1.1em 0 -1.3em;
+	}
+	40% {
+		box-shadow: 0 1.1em 0 0;
+	}
+}
